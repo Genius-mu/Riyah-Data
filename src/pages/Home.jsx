@@ -1,16 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  Zap,
-  Shield,
-  Clock,
-  Smartphone,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  Star,
-  ArrowRight,
-} from "lucide-react";
+import { Zap, Shield, Clock, TrendingUp, Star, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const fadeInUp = {
@@ -92,8 +83,37 @@ const Home = () => {
 
   return (
     <div className="w-full overflow-hidden">
+      <Helmet>
+        <title>
+          RAYAH'S BYTE BUZZ | Buy Cheap MTN, Glo, Airtel, 9mobile Data & Airtime
+        </title>
+        <meta
+          name="description"
+          content="Buy affordable MTN, Glo, Airtel & 9mobile data plans with instant delivery in Nigeria. Best prices, 24/7 support."
+        />
+        <meta
+          name="keywords"
+          content="RAYAH, riyahdata, ryah, buy data, cheap data Nigeria, MTN data, Glo data, Airtel data, 9mobile data, instant data delivery"
+        />
+        <meta
+          property="og:title"
+          content="RAYAH'S BYTE BUZZ - Affordable Data & Airtime"
+        />
+        <meta
+          property="og:description"
+          content="Instant delivery of cheap data bundles for all networks in Nigeria."
+        />
+        <meta
+          property="og:image"
+          content="https://riyahdata.vercel.app/og-image.jpg"
+        />{" "}
+        {/* Add a real image */}
+        <meta property="og:url" content="https://riyahdata.vercel.app/" />
+        <meta name="twitter:card" content="riyahdata" />
+        <link rel="canonical" href="https://riyahdata.vercel.app/" />
+      </Helmet>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1A237E] via-purple-600 to-[#FF4081] overflow-hidden">
         {/* Animated background particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(30)].map((_, i) => (
@@ -155,7 +175,7 @@ const Home = () => {
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-purple-600 py-4 px-8 rounded-full font-bold text-lg shadow-2xl flex items-center gap-2"
+                className="bg-white text-[#1A237E] py-4 px-8 rounded-full font-bold text-lg shadow-2xl flex items-center gap-2"
               >
                 View Plans <ArrowRight className="w-5 h-5" />
               </motion.button>
@@ -185,7 +205,7 @@ const Home = () => {
           >
             <motion.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              className="text-4xl md:text-5xl font-bold text-[#1A237E] mb-4"
             >
               Why Choose Us?
             </motion.h2>
@@ -214,7 +234,7 @@ const Home = () => {
                 }}
                 className="bg-white p-8 rounded-2xl shadow-lg text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1A237E] text-white rounded-full mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -237,7 +257,7 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A237E] mb-4">
               All Major Networks Supported
             </h2>
             <p className="text-lg text-gray-600">
@@ -279,7 +299,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-pink-500">
+      <section className="py-20 bg-gradient-to-br from-[#1A237E] to-[#FF4081]">
         <div className="container mx-auto px-6">
           <motion.div
             variants={staggerContainer}
@@ -314,7 +334,7 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A237E] mb-4">
               What Our Customers Say
             </h2>
             <p className="text-lg text-gray-600">
@@ -348,7 +368,7 @@ const Home = () => {
                   "{testimonial.text}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 bg-[#1A237E] rounded-full flex items-center justify-center text-white font-bold">
                     {testimonial.name[0]}
                   </div>
                   <div>
@@ -365,7 +385,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-br from-[#1A237E] to-[#FF4081]">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -387,7 +407,7 @@ const Home = () => {
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-purple-600 py-4 px-10 rounded-full font-bold text-lg shadow-2xl inline-flex items-center gap-2"
+                className="bg-white text-[#1A237E] py-4 px-10 rounded-full font-bold text-lg shadow-2xl inline-flex items-center gap-2"
               >
                 Check Out Our Plans <ArrowRight className="w-5 h-5" />
               </motion.button>

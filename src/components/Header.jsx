@@ -8,10 +8,10 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { path: "/", label: "Home", icon: <Home className="w-4 h-4" /> },
-    { path: "/about", label: "About", icon: <Info className="w-4 h-4" /> },
-    { path: "/plans", label: "Plans", icon: <Package className="w-4 h-4" /> },
-    { path: "/contact", label: "Contact", icon: <Phone className="w-4 h-4" /> },
+    { path: "/", label: "Home", icon: <Home className="w-5 h-5" /> },
+    { path: "/about", label: "About", icon: <Info className="w-5 h-5" /> },
+    { path: "/plans", label: "Plans", icon: <Package className="w-5 h-5" /> },
+    { path: "/contact", label: "Contact", icon: <Phone className="w-5 h-5" /> },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -21,27 +21,27 @@ const Header = () => {
   return (
     <>
       <motion.header
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg shadow-lg"
+        className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm"
       >
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-2 group">
+            <Link to="/" className="flex items-center gap-2.5 group">
               <motion.div
-                whileHover={{ rotate: 360 }}
+                whileHover={{ rotate: 360, scale: 1.1 }}
                 transition={{ duration: 0.6 }}
-                className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg"
+                className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-[#FF4081] to-[#1A237E] rounded-full flex items-center justify-center shadow-md"
               >
-                <Zap className="w-6 h-6 text-white" />
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-[#FF4081] to-[#1A237E] bg-clip-text text-transparent">
                   RAYAH'S BYTE BUZZ
                 </span>
-                <span className="text-xs text-gray-500 -mt-1">
+                <span className="text-xs text-gray-500 tracking-tight">
                   Stay Connected
                 </span>
               </div>
@@ -49,40 +49,46 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-2">
-              {navLinks.map((link) => (
-                <Link key={link.path} to={link.path} className="relative group">
-                  <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl font-semibold transition-all ${
-                      isActive(link.path)
-                        ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg"
-                        : "text-gray-700 hover:bg-gray-100"
-                    }`}
+              <div className="flex items-center gap-1.5 bg-gray-50/80 px-2 py-1 rounded-full">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className="relative group"
                   >
-                    {link.icon}
-                    <span>{link.label}</span>
-                  </motion.div>
-                  {isActive(link.path) && (
                     <motion.div
-                      layoutId="activeTab"
-                      className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full"
-                      transition={{
-                        type: "spring",
-                        stiffness: 380,
-                        damping: 30,
-                      }}
-                    />
-                  )}
-                </Link>
-              ))}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all ${
+                        isActive(link.path)
+                          ? "bg-gradient-to-r from-[#1A237E] to-[#FF4081] text-white shadow-md"
+                          : "text-gray-700 hover:bg-white/80"
+                      }`}
+                    >
+                      {link.icon}
+                      <span>{link.label}</span>
+                    </motion.div>
+                    {isActive(link.path) && (
+                      <motion.div
+                        layoutId="activeTab"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-[#1A237E] to-[#FF4081] rounded-full"
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
+                ))}
+              </div>
 
               {/* CTA Button */}
               <motion.a
                 href="/plans"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="ml-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
+                className="ml-3 bg-gradient-to-r from-[#1A237E] to-[#FF4081] text-white px-6 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg transition-all text-sm"
               >
                 Get Started
               </motion.a>
@@ -92,7 +98,7 @@ const Header = () => {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={toggleMenu}
-              className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br from-pink-500 to-purple-600 text-white shadow-lg"
+              className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-[#FF4081] to-[#1A237E] text-white shadow-md"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.button>
@@ -122,13 +128,13 @@ const Header = () => {
               className="fixed top-0 right-0 bottom-0 w-80 bg-white shadow-2xl z-50 md:hidden overflow-y-auto"
             >
               <div className="p-6">
-                {/* Mobile Menu Header */}
+                {/* Mobile Header */}
                 <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#FF4081] to-[#1A237E] rounded-full flex items-center justify-center">
                       <Zap className="w-6 h-6 text-white" />
                     </div>
-                    <span className="font-bold text-lg bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                    <span className="font-bold text-xl bg-gradient-to-r from-[#FF4081] to-[#1A237E] bg-clip-text text-transparent">
                       Menu
                     </span>
                   </div>
@@ -140,21 +146,21 @@ const Header = () => {
                   </button>
                 </div>
 
-                {/* Mobile Navigation Links */}
+                {/* Mobile Navigation */}
                 <nav className="space-y-2">
                   {navLinks.map((link, index) => (
                     <motion.div
                       key={link.path}
-                      initial={{ opacity: 0, x: 50 }}
+                      initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      transition={{ delay: index * 0.08 }}
                     >
                       <Link
                         to={link.path}
                         onClick={toggleMenu}
-                        className={`flex items-center gap-3 px-4 py-3 rounded-xl font-semibold transition-all ${
+                        className={`flex items-center gap-3 px-5 py-3.5 rounded-xl font-medium transition-all ${
                           isActive(link.path)
-                            ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg"
+                            ? "bg-gradient-to-r from-[#1A237E] to-[#FF4081] text-white shadow-md"
                             : "text-gray-700 hover:bg-gray-100"
                         }`}
                       >
@@ -169,32 +175,32 @@ const Header = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className="mt-8 pt-8 border-t border-gray-200"
+                  transition={{ delay: 0.3 }}
+                  className="mt-8"
                 >
                   <a
                     href="/plans"
                     onClick={toggleMenu}
-                    className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-4 rounded-xl font-bold shadow-lg"
+                    className="block w-full bg-gradient-to-r from-[#1A237E] to-[#FF4081] text-white text-center py-3.5 px-6 rounded-xl font-semibold shadow-md"
                   >
                     View All Plans
                   </a>
                 </motion.div>
 
-                {/* Contact Info in Mobile Menu */}
+                {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="mt-8 p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl"
+                  transition={{ delay: 0.4 }}
+                  className="mt-8 p-4 bg-gradient-to-br from-[#1A237E]/5 to-[#FF4081]/5 rounded-xl border border-[#1A237E]/10"
                 >
-                  <h4 className="font-bold text-gray-900 mb-2">Need Help?</h4>
+                  <h4 className="font-bold text-[#1A237E] mb-2">Need Help?</h4>
                   <p className="text-sm text-gray-600 mb-3">
                     Contact us for instant support
                   </p>
                   <a
                     href="tel:09132755106"
-                    className="flex items-center gap-2 text-purple-600 font-semibold text-sm"
+                    className="flex items-center gap-2 text-[#1A237E] font-medium text-sm hover:underline"
                   >
                     <Phone className="w-4 h-4" />
                     09132755106

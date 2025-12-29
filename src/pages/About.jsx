@@ -37,25 +37,25 @@ const About = () => {
       icon: <Shield className="w-8 h-8" />,
       title: "Reliability",
       description: "99.9% uptime with instant delivery guaranteed",
-      color: "from-blue-500 to-blue-600",
+      color: "from-[#1A237E] to-[#1A237E]/90", // using blue
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Customer First",
       description: "Your satisfaction is our top priority always",
-      color: "from-pink-500 to-pink-600",
+      color: "from-[#FF4081] to-[#FF4081]/90",
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Speed",
       description: "Lightning-fast transactions in seconds",
-      color: "from-yellow-500 to-yellow-600",
+      color: "from-[#1A237E] to-[#1A237E]/90",
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Quality",
       description: "Premium service at unbeatable prices",
-      color: "from-purple-500 to-purple-600",
+      color: "from-[#FF4081] to-[#FF4081]/90",
     },
   ];
 
@@ -90,7 +90,7 @@ const About = () => {
   return (
     <div className="w-full min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 py-20 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#1A237E] via-[#1A237E]/80 to-[#FF4081] py-20 overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
           {[...Array(20)].map((_, i) => (
@@ -150,7 +150,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1A237E] mb-6">
                 Our Story
               </h2>
               <div className="space-y-4 text-lg text-gray-700">
@@ -184,7 +184,7 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-2xl p-8 shadow-2xl">
+              <div className="bg-gradient-to-br from-[#1A237E] to-[#FF4081] rounded-2xl p-8 shadow-2xl">
                 <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white">
                   <h3 className="text-3xl font-bold mb-6">Why Choose Us?</h3>
                   <ul className="space-y-4">
@@ -221,7 +221,7 @@ const About = () => {
           >
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-blue-500 to-blue-600 p-10 rounded-2xl shadow-xl text-white"
+              className="bg-gradient-to-br from-[#1A237E] to-[#1A237E]/90 p-10 rounded-2xl shadow-xl text-white"
             >
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
                 <Target className="w-8 h-8" />
@@ -237,7 +237,7 @@ const About = () => {
 
             <motion.div
               variants={fadeInUp}
-              className="bg-gradient-to-br from-purple-500 to-pink-500 p-10 rounded-2xl shadow-xl text-white"
+              className="bg-gradient-to-br from-[#1A237E] to-[#FF4081] p-10 rounded-2xl shadow-xl text-white"
             >
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
                 <Eye className="w-8 h-8" />
@@ -264,7 +264,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A237E] mb-4">
               Our Core Values
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -291,7 +291,7 @@ const About = () => {
                 >
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl font-bold text-[#1A237E] mb-3">
                   {value.title}
                 </h3>
                 <p className="text-gray-600">{value.description}</p>
@@ -311,7 +311,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A237E] mb-4">
               Our Journey
             </h2>
             <p className="text-lg text-gray-600">
@@ -329,7 +329,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center gap-6 mb-8"
               >
-                <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-[#1A237E] to-[#FF4081] rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
                   {milestone.year}
                 </div>
                 <div className="flex-grow bg-white p-6 rounded-xl shadow-lg">
@@ -344,7 +344,7 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-600 to-pink-500">
+      <section className="py-20 bg-gradient-to-br from-[#1A237E] to-[#FF4081]">
         <div className="container mx-auto px-6">
           <motion.div
             variants={staggerContainer}
@@ -384,7 +384,7 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1A237E] mb-6">
               Ready to Experience the Difference?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
@@ -394,13 +394,13 @@ const About = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/plans"
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-xl font-bold text-lg hover:shadow-2xl transition-all"
+                className="inline-block bg-gradient-to-r from-[#1A237E] to-[#FF4081] text-white py-4 px-8 rounded-xl font-bold text-lg hover:shadow-2xl transition-all"
               >
                 View Our Plans
               </a>
               <a
                 href="/contact"
-                className="inline-block bg-white border-2 border-gray-900 text-gray-900 py-4 px-8 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all"
+                className="inline-block bg-white border-2 border-[#1A237E] text-[#1A237E] py-4 px-8 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all"
               >
                 Contact Us
               </a>

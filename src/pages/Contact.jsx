@@ -55,21 +55,21 @@ const Contact = () => {
       title: "Call Us",
       info: "09132755106",
       link: "tel:09132755106",
-      color: "from-blue-500 to-blue-600",
+      color: "from-[#1A237E] to-[#1A237E]/90",
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
       title: "WhatsApp",
       info: "Chat with us instantly",
       link: "https://wa.me/2349132755106",
-      color: "from-green-500 to-green-600",
+      color: "from-[#FF4081] to-[#FF4081]/90",
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       info: "support@rayahsbytebuzz.com",
       link: "mailto:support@rayahsbytebuzz.com",
-      color: "from-purple-500 to-purple-600",
+      color: "from-[#1A237E] to-[#FF4081]",
     },
   ];
 
@@ -82,7 +82,7 @@ const Contact = () => {
   return (
     <div className="w-full min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 py-20">
+      <section className="relative bg-gradient-to-br from-[#1A237E] via-[#1A237E]/80 to-[#FF4081] py-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ const Contact = () => {
                 >
                   {method.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-[#1A237E] mb-2">
                   {method.title}
                 </h3>
                 <p className="text-gray-600">{method.info}</p>
@@ -146,7 +146,7 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
               className="bg-white p-8 md:p-12 rounded-2xl shadow-xl"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl font-bold text-[#1A237E] mb-6">
                 Send Us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -160,7 +160,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#FF4081] focus:border-transparent transition-all"
                     placeholder="John Doe"
                   />
                 </div>
@@ -174,7 +174,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#FF4081] focus:border-transparent transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#FF4081] focus:border-transparent transition-all"
                     placeholder="0913 275 5106"
                   />
                 </div>
@@ -202,7 +202,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#FF4081] focus:border-transparent transition-all resize-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
@@ -210,7 +210,7 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-[#1A237E] to-[#FF4081] text-white py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2"
                 >
                   {submitted ? (
                     <>
@@ -238,10 +238,10 @@ const Contact = () => {
               {/* Business Hours */}
               <div className="bg-white p-8 rounded-2xl shadow-xl">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#1A237E] rounded-full flex items-center justify-center">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-2xl font-bold text-[#1A237E]">
                     Business Hours
                   </h3>
                 </div>
@@ -263,10 +263,10 @@ const Contact = () => {
               {/* Location */}
               <div className="bg-white p-8 rounded-2xl shadow-xl">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#FF4081] rounded-full flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-2xl font-bold text-[#1A237E]">
                     Our Location
                   </h3>
                 </div>
@@ -277,7 +277,7 @@ const Contact = () => {
               </div>
 
               {/* Why Contact Us */}
-              <div className="bg-gradient-to-br from-purple-600 to-pink-500 p-8 rounded-2xl shadow-xl text-white">
+              <div className="bg-gradient-to-br from-[#1A237E] to-[#FF4081] p-8 rounded-2xl shadow-xl text-white">
                 <h3 className="text-2xl font-bold mb-4">Need Help?</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
@@ -312,7 +312,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1A237E] mb-4">
               Have Questions?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
@@ -320,7 +320,7 @@ const Contact = () => {
             </p>
             <a
               href="/faq"
-              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-8 rounded-xl font-bold hover:shadow-xl transition-all"
+              className="inline-block bg-gradient-to-r from-[#1A237E] to-[#FF4081] text-white py-3 px-8 rounded-xl font-bold hover:shadow-xl transition-all"
             >
               View FAQ
             </a>
