@@ -25,7 +25,7 @@ Nigeria's fastest and most reliable platform for airtime and data. Instant deliv
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Genius-mu/Riyah-s-Data.git
    cd rayahs-byte-buzz
    ```
 
