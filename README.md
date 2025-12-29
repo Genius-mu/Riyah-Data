@@ -1,16 +1,88 @@
-# React + Vite
+# RAYAH'S BYTE BUZZ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nigeria's fastest and most reliable platform for airtime and data. Instant delivery, unbeatable prices!
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Instant Delivery**: Get your airtime and data in seconds, 24/7
+- **100% Secure**: Bank-level encryption for all transactions
+- **24/7 Support**: Always here to help with any issues
+- **Best Rates**: Lowest prices guaranteed in Nigeria
+- **All Major Networks**: Support for MTN, Airtel, Glo, and 9mobile with exclusive discounts
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19 with Vite
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
+- **Build Tool**: Vite with Rolldown
+- **Linting**: ESLint
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   cd rayahs-byte-buzz
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## 📱 Pages
+
+- **Home**: Landing page with features, network providers, stats, and testimonials
+- **About**: Information about the platform
+- **Plans**: Available airtime and data plans
+- **Contact**: Contact information and form
+- **FAQ**: Frequently asked questions
+
+## 🎨 Design
+
+The application features a modern, responsive design with:
+
+- Gradient backgrounds and smooth animations
+- Mobile-first responsive layout
+- Interactive hover effects
+- Professional color scheme
+
+## 📊 Stats
+
+- 50K+ Happy Customers
+- 99.9% Uptime
+- ₦2M+ Transactions Daily
+- 24/7 Support
+
+## 🤝 Contributing
+
+This is a private project. Contributions are not currently accepted.
+
+## 📄 License
+
+This project is private and proprietary.
