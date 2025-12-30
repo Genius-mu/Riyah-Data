@@ -302,7 +302,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section hmm */}
       <section className="py-20 bg-gradient-to-br from-[#1A237E] to-[#FF4081]">
         <div className="container mx-auto px-6">
           <motion.div
