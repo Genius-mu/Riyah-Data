@@ -271,9 +271,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center md:text-right">
               <p className="text-sm text-gray-400 flex items-center justify-center md:justify-end gap-1">
-                &copy; 2025 RAYAH'S BYTE BUZZ. Made with{" "}
-                <Heart className="w-4 h-4 text-red-500 fill-red-500" /> in
-                Nigeria
+                &copy; 2025 RAYAH'S BYTE BUZZ.
               </p>
               <p className="text-xs text-gray-500 mt-1">
                 All rights reserved. Terms & Privacy Policy
